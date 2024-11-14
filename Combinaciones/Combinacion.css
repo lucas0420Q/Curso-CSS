@@ -2,3 +2,58 @@ h2,h3{
     font-size: 25px;
     font-family: Arial;
 }
+
+/*selector de combinaciones*/
+
+.contenedor p{
+    color: lightblue;
+}
+
+/* selector de combinaciones de desendientes*/
+
+.contenedor > p{
+    color: red;
+}
+
+/* selector de combinaciones de descendientes que son hijos directos*/
+
+nav.contenedor{
+    background: lightblue;
+}
+
+/* selector de combinaciones de descendientes que son hijos indirectos*/
+
+nav .contenedor{
+    background: red;
+}
+
+/* selector de combinaciones de descendientes que son hijos de dos niveles ( Son los que estan adentro de nav )*/
+
+.contenedor a{
+    text-decoration: none;
+    color: firebrick;
+}
+
+.contenedor > a{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h2+p{
+    color: gold;
+}
+
+/* este es porque son hermanos adyacentes*/
+
+/* h2~p{
+    color: green;
+} */
+
+/* este es porque son hermanos adyacentes que son hijos directos*/
+
+h3~p{
+    color: indigo;
+}
+
+/* este es porque son hermanos adyacentes que son hijos directos*/
+
