@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+.box{
+   width: 300px;
+   height: 150px;
+}
+
+.box1{
+    background: red;
+    border: 1px solid black;
+    /*margin-top: 50px; /*Esto da un margen hacia arriba*/
+    /*margin-bottom: 40px; /*Esto da un margen hacia abajo*/
+    /*margin-left: 30px; /*Esto da un margen hacia la izquierda*/
+    /*margin-right: 25px; /*Esto da un margen hacia la derecha*/
+
+    /*margin: top right bottom left;*/
+    /*margin: 50px 30px 40px 25px;
+
+    /*margin: top button y right left;*/
+    /*margin: 40px 50px; */
+
+    /*margin: auto;*/;
+  
+}
+
+.box2{
+    background: crimson;
+    color: white;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 20px;
+    /* padding-top: 20px;
+    padding-bottom: 30px;
+    padding-right: 50px;
+    padding-left: 40px; */
+
+    /* padding: 30px 20px 30px 40px; */
+
+    padding: 20px 30px;
+
+}
