@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .enlaces{
+    display: inline-block;
+    margin: 10px;
+    width: 100px;
+    text-decoration: none;
+    background: crimson;
+    color: white;
+    padding: 30px 20px;
+}
+
+.block{
+    display: none;
+    opacity: 0;
+} */
+
+/* 
+1000 - inline css ( no se usa es una mala practica)
+100 - ID
+10 - class
+1 - elemento
+*/
+ 
+.header{
+    background: crimson;
+    color: white;
+    padding: 10px;
+    height: 300px;
+    border: 5px solid black;
+    font-family: Arial;
+    text-align: center;
+}
+
+.title{
+    font-size: 30px ;
+    border: inherit;
+    padding: inherit;
+    font-family: helvetica;
+    text-align: initial;
+    color: initial;
+    font-family: initial;
+} 
+
+
+
