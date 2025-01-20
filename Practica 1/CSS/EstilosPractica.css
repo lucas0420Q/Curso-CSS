@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Lato", serif;
+}
+
+.background{
+   width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.section1{
+    background-image: url(../img/Hero.webp);
+    padding: 0.1px;
+}
+
+.section1 h2{
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 100px;
+    margin-top: calc(50vh - 50px);
+}
+
+.text{
+    width: 100%;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.text p{
+    padding: 20px 0;
+}
+
+.section2{
+    height: 600px;
+    background-color: #f2f2f2;
+    background-image: url(../img/Fondos1.webp);
+}
+
+.background h3{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.section2 h3{
+    padding-top: calc(50vh - 200px);
+    color: white;
+}
+
+.text2{
+    width: 100%;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.text2 p{
+    padding: 20px 0;
+}
+
+.section3{
+    height: 600px;
+    background-color: #f2f2f2;
+    background-image: url(../img/Fondos2.webp);
+}
+
+.background h4{
+    font-size: 4rem;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.section3 h4{
+    padding-top: calc(50vh - 200px);
+    color: white;
+}

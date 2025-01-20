@@ -1,0 +1,138 @@
+/* :root{
+    background: rgba(70, 131, 180, 0.855);
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.enlace{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    border-bottom: 3px solid white;
+}
+
+.enlace:link{
+    background: red;
+    color: black;
+}
+
+.enlace:visited{
+    background: blue;
+    color: white;
+}
+
+.enlace:hover{
+    text-decoration: underline;
+    padding: 40px 20px;
+    transition: .3s;
+    background: green;
+    color: white;
+}
+
+.enlace:active{
+    background: steelblue;
+    color: red;
+}
+
+.event{
+    display: inline-block;
+    background: red;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.event:active{
+    padding: 23px;
+}
+
+#objetivo{
+   width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 20px;
+    background: green;
+    transition: .3s;
+}
+
+#objetivo:target{
+    margin-left: 200px;
+}
+
+.form{
+   width: 80%;
+   margin: 30px auto;
+   background: whitesmoke;
+   padding: 30px;
+   box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.form:focus-within{
+    background: rgba(117, 117, 117, 0.159);
+}
+
+.form_title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input{
+    display: block;
+}
+
+input[type="text"], input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+input[type="checkbox"]{
+    display: inline-block;
+    margin-top: 10px;
+}
+
+input[type="submit"]{ 
+    background: steelblue;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+input:focus{
+    border: 2px solid steelblue;
+    background: rgba(117, 117, 117, 0.159);
+}
+
+input[type="checkbox"]:checked + label{
+    color: steelblue;
+    background: rgba(117, 117, 117, 0.159);
+}
+
+h3{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: normal;
+    font-family: 'Arial';
+}
+
+h3:not(.tittle):not(:hover){
+    color: red;
+}
+
+h3:not(:hover){
+    text-decoration: line-through;
+}
