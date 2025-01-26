@@ -37,6 +37,54 @@ body{
     background: red;
 } */
 
-.box:last-of-type{
+/* .box:last-of-type{
+    background: red;
+} */
+ 
+/* .box:nth-of-type(odd){
+    background: red;
+} */
+
+/* .box:nth-of-type(even){
+    background: red;
+} */
+
+/* .box:nth-of-type(n){
+    background: red;
+} */
+
+/* .box:nth-of-type(2n+1){
+    background: red;
+} */
+
+/* .box:nth-last-of-type(2){
+    background: red;
+} */
+
+/* .container :only-child{
+    background: red;
+} */
+
+/* div:first-child{
+    background: red;
+} */
+
+/* div:last-child{
+    background: red;
+} */
+
+/* div:nth-child(odd){
+    background: red;
+} */
+
+/* .container :nth-child(2){
+    background: red;
+} */
+
+/* body :nth-child(1){
+    background: red;
+} */
+
+.container :nth-last-child(1){
     background: red;
 }
