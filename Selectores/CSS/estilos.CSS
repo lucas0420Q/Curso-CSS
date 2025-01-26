@@ -1,0 +1,60 @@
+
+h2{
+    color: steelblue;
+}
+/* h2 es un selector de etiquetas */
+
+.lucas{
+    border: 1px solid black;
+}
+/*. es un selector de clase*/
+
+#section{
+    border: 1px solid rgb(0, 0, 0);
+}
+/*# es un selector de id*/
+
+.titulo{
+    text-align: center;
+}
+
+.😊{
+    color: darkblue;
+}
+
+/* 😊 es un selector de emoji */
+
+.😂{
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+[href]{
+    text-decoration: none;
+}
+
+/*[href] es un selector de atributo*/
+
+[href="https://google.com"]{
+    color: red;
+}
+
+[href^= "hsttps"]{
+    color: green;
+}
+
+/* [href^="hsttps"] es un selector de atributo que comienza con hsttps */
+
+[href$=".org"]{
+    background: yellowgreen;
+}
+
+/* [href$=".org"] es un selector de atributo que termina con .org */
+
+[href*="google"]{
+    background: darkturquoise;
+}
+
+/* [href*="google"] es un selector de atributo que contiene en cuelquier lugar google */
+
+
