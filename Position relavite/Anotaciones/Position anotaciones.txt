@@ -1,0 +1,35 @@
+1. static (Por defecto)
+Es el valor predeterminado de todos los elementos.
+El elemento sigue el flujo normal del documento.
+No puedes usar propiedades como top, right, bottom, o left.
+
+2. relative (Relativo)
+El elemento se posiciona relativo a su posición original.
+Puedes ajustar su posición usando top, right, bottom, o left.
+Su espacio original sigue siendo reservado en el flujo.
+
+3. absolute (Absoluto)
+El elemento se posiciona relativo al contenedor más cercano con position: relative, absolute, o fixed.
+Si no hay contenedor posicionado, se posiciona relativo al <html>.
+No se reserva su espacio en el flujo del documento.
+
+4. fixed (Fijo)
+El elemento se posiciona relativo a la ventana del navegador.
+No se mueve al hacer scroll.
+No se reserva su espacio en el flujo del documento.
+
+Propiedades relacionadas
+Las siguientes propiedades funcionan junto con position para ajustar la ubicación de un elemento:
+
+top: Distancia desde la parte superior.
+right: Distancia desde la parte derecha.
+bottom: Distancia desde la parte inferior.
+left: Distancia desde la parte izquierda.
+
+El inset: 0 en CSS es una propiedad abreviada (shorthand) que establece las propiedades de posicionamiento de un elemento en todos sus lados simultáneamente. 
+Es equivalente a escribir:
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+

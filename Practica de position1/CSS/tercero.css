@@ -1,0 +1,25 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    height: 200vh;
+}
+
+.container{
+    width: 100%;
+    height: 50px;
+    background: steelblue;
+    position: fixed;
+}
+
+.text{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+}
