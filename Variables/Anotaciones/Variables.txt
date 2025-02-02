@@ -1,0 +1,31 @@
+Variables:
+
+las variables (también conocidas como custom properties) son una forma de almacenar valores que puedes reutilizar a lo largo de tu hoja de estilos. 
+Esto te permite mantener un código más organizado, fácil de mantener y consistente.
+
+Las variables se declaran dentro de un selector, generalmente en el selector :root para que estén disponibles globalmente.
+
+Usar una variable:
+Para usar una variable, se utiliza la función var().
+
+Ventajas de usar variables en CSS:
+
+Reutilización: Puedes definir un valor una vez y usarlo en múltiples lugares.
+Mantenimiento: Si necesitas cambiar un valor, solo lo modificas en la declaración de la variable.
+Consistencia: Ayuda a mantener un diseño coherente en toda la aplicación.
+
+Notas adicionales:
+Las variables en CSS son sensibles a mayúsculas y minúsculas (--color y --Color son diferentes).
+
+Puedes definir variables dentro de cualquier selector, pero su alcance estará limitado a ese selector y sus descendientes.
+
+Si una variable no está definida, puedes proporcionar un valor por defecto:
+
+el término fallback se refiere a proporcionar un valor alternativo o de respaldo en caso de que una propiedad, función o recurso no esté disponible o no sea compatible 
+con el navegador. Esto es especialmente útil para garantizar que tu diseño o funcionalidad siga funcionando correctamente en navegadores más antiguos o en situaciones 
+donde ciertas características no están soportadas.
+
+Fallback en CSS
+1. Fallback para propiedades no soportadas
+Si una propiedad CSS no es compatible con un navegador, puedes proporcionar un valor alternativo antes de la propiedad más moderna. 
+Los navegadores ignorarán las propiedades que no entiendan y usarán la última declaración que sí puedan interpretar.

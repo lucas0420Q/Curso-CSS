@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient1: linear-gradient(135deg, #667eea86 0%, #764ba28e 100%);
+    --url-img: url(../Img/Hero.jpg);
+    --box-shadow: 6px 6px 10px rgba(0, 0, 0, .6);
+    --width: 100%;
+    --radius: 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    min-height: 100vh;
+    background-image: var(--gradient1), var(--url-img);
+    background-size: cover;
+    background-position: center;
+}
+
+.form{
+    width: 400px;
+    background: #fff;
+    margin: 70px auto;
+    padding: 30px 20px 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    overflow: hidden;
+}
+
+.input{
+    width: var(--width);
+    margin-bottom: 20px;
+    padding: 15px 5px; 
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    outline: none;
+}
+
+.input:focus{
+    border-color: blue;
+}
+
+.form_title{
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 3px solid blueviolet;
+    width: fit-content;
+    margin: 0 auto 20px;
+    padding-bottom: 5px;
+}
+
+.form_submit{
+    width: var(--width);
+    padding: 15px 5px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--gradient);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.form_message{
+    max-width: var(--width);
+    min-width: var(--width);
+    min-height: 150px;
+    max-height: 150px;
+}
