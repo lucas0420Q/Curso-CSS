@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    text-align: center;
+    font-size: 3rem;
+    margin: 40px 0;
+    font-family: monospace;
+    color: crimson;
+}
+
+
+
+/* @media <media-type> and (expresion){
+
+} */
+
+/* @media screen and (max-width: 600px), (min-width: 900px){
+    .title{
+        color: #fff;
+        text-align: center;
+        background: black;
+        text-decoration: underline;
+    }
+    
+} */
+
+
+/* @media screen and (max-width: 600px) and (orientation: portrait){
+    .title{
+        text-align: left;
+        background: steelblue;
+    }
+    
+} */
+
+/* @media screen and (orientation: portrait){
+    .title{
+        margin: 0;
+        color: #fff;
+        background: black;
+        height: 100vh;
+    }
+} */
+
+/* @media print{
+    .title{
+        color: steelblue;
+        text-align: center;
+        font-family: cursive;
+        font-size: 5rem;
+    }
+} */
+
+/* @media screen and (max-width: 600px){
+    .title{
+        color: #fff;
+        text-align: center;
+        background: black;
+        text-decoration: underline;
+    }
+} */

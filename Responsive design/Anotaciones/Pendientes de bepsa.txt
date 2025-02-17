@@ -1,0 +1,37 @@
+1- Boton de exportar debe funcionar con todos los filtros aunque no se muestres en el excel las columnas. ( Terminado )
+2- EL buscador de comercio/entidad conversar con Simon que status tiene. ( Terminado )
+3- El detalle del comercio debe ser dinamico con el tema de caso, en la primera vista debe aparecer todos los casos pero en la sucursal debe aparecer 
+	los casos que tiene esa sucursal. ( Simon, CLaus )- ( Terminado )
+4- Cambiar el check del aprobador. ( Claus ) ( Terminado ) 
+5- En el historial de mteriales debe aparecer la cantidad que se pidio y la cantidad que aprobo el aprobador.( Terminado )
+6- Verificar porque pudieron cambiar otro ticket que no tenian asigando. ( Intentar replicar )
+7- Al ingresar el codigo comercio en casos ya debe completarte la sucursal y el codigo comercio. ( Simon, CLaus ) 
+8- Dar seguimiento con el boton de exportar para mandar la imagen. ( Terminado )
+9- Agregar el Area y persona en el Historial y que aparezca los ( Dias, Min, Seg) como esta el de estados. ( Simon, Ricardo y claus )
+10- En el filtro general agregar el filtrado por fecha de creacion y fecha de cierre. ( Simon, claus ) ( No es critico )
+11- Multiple selector en la tuerquita de los formularios agregar la moneda ( Solo el admin puede cambiar ). ( Simon, claus ) 
+12- verificar que el filtro de comercio y entidad al tener muchas sucursales sea un poco mas rapido, que haga un paginado. ( Simon, claus )
+13- Agregar estado rechazado. ( Simon y claus )
+14- Al enviar notas que le envie un correo a la persona resolutora. ( Simon ) ( No es necesario " Comentarle a ricardo" )
+15- Dar un seguimiento a los puntos comentado sobre CRM.Bepsa ( Lucas )
+16- Agregar la tuerquita en casos con la configuracion de la moneda. ( Simon, Claus )
+17-	Para activar caso que sea por usuario y permiso que le deje reactivar el caso. ( Para los jefes Ej: Shirley )-( Simon, claus )
+
+Puntos pendientes del correo:
+
+18- FORMULARIOS: Agregar exportación de Excel a los formularios existentes a modo de que cada persona pueda exportar un informe en Excel por cada formulario.
+
+19- Excluir de la vista lista FECHA PEDIDO, agregar Cierre de pedido de estar a lado del estado.
+
+Terminados:
+1,2,4,5,8,3
+
+verificar:
+6,15
+
+Desarrollo:
+7,9,11,12,13,16,17,18,19
+
+No se agrega:
+10,14
+

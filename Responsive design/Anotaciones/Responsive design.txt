@@ -1,0 +1,65 @@
+1. ¿Qué es el diseño adaptable (Responsive Design)?
+El diseño adaptable (o Responsive Design) es un enfoque de diseño web que busca que las páginas se vean y funcionen correctamente en cualquier dispositivo, 
+independientemente de su tamaño o resolución de pantalla. Esto se logra mediante el uso de técnicas de CSS, como:
+
+Media Queries: Permiten aplicar estilos específicos según el ancho de la pantalla, la orientación (horizontal o vertical) o la resolución del dispositivo.
+
+Unidades relativas: Uso de unidades como %, em, rem, vh, vw, en lugar de unidades fijas como px, para que los elementos se ajusten proporcionalmente.
+
+Imágenes flexibles: Uso de max-width: 100% en las imágenes para que se redimensionen según el contenedor.
+
+Grids y Flexbox: Sistemas de diseño que permiten crear estructuras flexibles y adaptables.
+
+El objetivo es mejorar la experiencia del usuario, ya sea que esté navegando desde un teléfono móvil, una tablet, una laptop o un monitor de escritorio.
+
+2. La etiqueta viewport en HTML
+La etiqueta <meta name="viewport"> es esencial para el diseño adaptable. Se coloca en la sección <head> del documento HTML y permite controlar 
+cómo se muestra el contenido en dispositivos móviles.
+
+Sintaxis básica:
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Explicación de los atributos:
+width=device-width: Ajusta el ancho de la página al ancho de la pantalla del dispositivo.
+
+initial-scale=1.0: Establece el nivel de zoom inicial al 100% (sin zoom).
+
+maximum-scale=1.0: Limita el zoom máximo (opcional).
+
+user-scalable=no: Impide que el usuario haga zoom (opcional, no recomendado para accesibilidad).
+
+Importancia:
+Sin esta etiqueta, los navegadores móviles podrían renderizar la página como si fuera para un escritorio, lo que haría que el contenido se vea demasiado pequeño 
+y obligue al usuario a hacer zoom manualmente. Con el viewport, el diseño se adapta automáticamente al tamaño de la pantalla.
+
+Modo vertical: Portrait el width es mas pequeño que el height
+
+modo orizontal: landscape el width es mas grande que el height
+
+Imágenes Responsive
+Las imágenes responsive son aquellas que se ajustan automáticamente al tamaño de la pantalla o del contenedor en el que se encuentran. 
+Esto es fundamental para garantizar que las imágenes no se vean pixeladas, cortadas o demasiado grandes en dispositivos móviles o pantallas pequeñas.
+
+Técnicas para crear imágenes responsive
+Usar max-width: 100% y height: auto
+
+Esta es la técnica más común. Aplicando max-width: 100% a una imagen, esta no superará el ancho de su contenedor, y height: auto asegura que la altura 
+se ajuste proporcionalmente.
+
+Ejemplo HTML:
+
+<img src="imagen.jpg" alt="Imagen responsive">
+
+Usar la etiqueta <picture>:
+La etiqueta <picture> permite cargar diferentes imágenes según el tamaño de la pantalla o la resolución del dispositivo. 
+Es ideal para optimizar el rendimiento y la calidad de las imágenes.
+
+html
+<picture>
+    <source media="(min-width: 768px)" srcset="imagen-grande.jpg">
+    <source media="(max-width: 767px)" srcset="imagen-pequeña.jpg">
+    <img src="imagen-default.jpg" alt="Imagen responsive">
+</picture>
+
+
