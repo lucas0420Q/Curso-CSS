@@ -14,12 +14,13 @@ body{
     display: inline-flex;
     background: steelblue;
     flex-direction: row;
-    gap:20px ;
+    gap: 10px;
 }
 
 .link{
     background: #fff;
     padding: 10px 30px ;
+    border-radius: 5px;
     text-decoration: none;
     color: slateblue;
 }
@@ -41,13 +42,18 @@ body{
     color: #fff;
     font-size: 2rem;
     text-align: center;
+    width: 100px;
     flex-basis: 50%;
+    /* height: 100%; */
     
 }
 
 .figure{
     flex-basis: 50%;
     height: 100%;
+    /* background-image: url(img.jpg);
+    background-size: cover;
+    background-position: center; */
 }
 
 .img{

@@ -1,0 +1,120 @@
+1. Conceptos Básicos
+
+Flexbox es un modelo de diseño de CSS que permite crear estructuras de diseño flexibles y responsivas. Se basa en un contenedor (flex container) y 
+elementos hijos (flex items).
+
+2. Propiedades del Contenedor (Flex Container)
+
+display:
+
+flex: Activa el modelo de Flexbox.
+
+inline-flex: Similar a flex pero el contenedor se comporta como un elemento en línea.
+
+flex-direction: (Define la dirección principal)
+
+row (Por defecto): De izquierda a derecha.
+
+row-reverse: De derecha a izquierda.
+
+column: De arriba hacia abajo.
+
+column-reverse: De abajo hacia arriba.
+
+flex-wrap: (Controla el ajuste de los elementos)
+
+nowrap (Por defecto): No permite el salto de línea.
+
+wrap: Permite que los elementos se ajusten en varias líneas.
+
+wrap-reverse: Igual a wrap pero en orden inverso.
+
+justify-content: (Alinea los elementos en el eje principal)
+
+flex-start (Por defecto): Inicio del contenedor.
+
+flex-end: Final del contenedor.
+
+center: Centro del contenedor.
+
+space-between: Espacio igual entre elementos.
+
+space-around: Espacio igual alrededor de los elementos.
+
+space-evenly: Espacios uniformes entre los elementos.
+
+align-items: (Alinea los elementos en el eje secundario)
+
+stretch (Por defecto): Estira los elementos para llenar el contenedor.
+
+flex-start: Alinea al inicio.
+
+flex-end: Alinea al final.
+
+center: Alinea al centro.
+
+baseline: Alinea según la línea base del contenido.
+
+align-content: (Alinea líneas cuando hay múltiples filas)
+
+stretch (Por defecto): Estira las líneas para ocupar el espacio.
+
+flex-start: Inicio del contenedor.
+
+flex-end: Final del contenedor.
+
+center: Centro del contenedor.
+
+space-between: Espacio igual entre líneas.
+
+space-around: Espacio alrededor de las líneas.
+
+3. Propiedades de los Elementos (Flex Items)
+
+order: (Cambia el orden de los elementos)
+
+Valor numérico (Por defecto es 0). Los elementos con valores menores se muestran primero.
+
+flex-grow: (Define el crecimiento proporcional)
+
+Valor numérico (Por defecto es 0). Cuanto mayor sea el valor, más espacio ocupa el elemento.
+
+flex-shrink: (Define la capacidad de reducirse)
+
+Valor numérico (Por defecto es 1). Un valor mayor permite que el elemento se encoja más.
+
+flex-basis: (Define el tamaño inicial)
+
+Valor en unidades de longitud (px, %, etc.). Por defecto es auto.
+
+flex: (Atajo para flex-grow, flex-shrink y flex-basis)
+
+Ejemplo: flex: 1 1 100px; (crecimiento, reducción, tamaño inicial).
+
+align-self: (Alinea un elemento individualmente)
+
+auto (Por defecto): Usa el valor de align-items.
+
+flex-start, flex-end, center, baseline, stretch (Igual que align-items).
+
+4. Ejemplo Básico de Flexbox:
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  flex: 1;
+  order: 2;
+}
+
+/* Flex-grow: Es el factor de creacimiento de un item, determina el tamaño de un item. ( Distribuye el espacio sobrante entre el resto ). */
+
+flex-grow → Hace que el elemento crezca si sobra espacio.
+
+flex-shrink → Permite que el elemento se encoja si falta espacio.
+
+flex-basis → Define el tamaño inicial del elemento.
