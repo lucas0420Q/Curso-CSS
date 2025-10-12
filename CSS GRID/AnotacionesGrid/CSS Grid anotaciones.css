@@ -1,0 +1,349 @@
+¡Claro que sí! Aquí tienes unas anotaciones muy detalladas sobre CSS Grid, diseñadas para que te sirvan como una guía de referencia completa para futuros repasos. Están estructuradas desde los conceptos más básicos hasta los más avanzados, con ejemplos claros.
+
+Anotaciones Completas de CSS Grid
+1. Introducción y Conceptos Fundamentales
+
+¿Qué es CSS Grid?
+CSS Grid Layout es un sistema de maquetación bidimensional (2D). A diferencia de Flexbox (que es principalmente 1D, para filas o columnas), Grid te permite controlar la disposición de elementos tanto en filas como en columnas simultáneamente. Es como tener una hoja de cálculo invisible en tu página web.
+
+Terminología Clave (¡Esencial entender esto!):
+
+Grid Container (Contenedor Grid): Es el elemento padre que contiene la cuadrícula. Se crea aplicando display: grid; o display: inline-grid;.
+
+Grid Item (Ítem Grid): Son los hijos directos del contenedor grid. Automáticamente se convierten en ítems de la cuadrícula.
+
+Grid Line (Línea de Grid): Son las líneas horizontales y verticales que dividen la cuadrícula. Son como las líneas de una regla y se numeran a partir de 1.
+
+Grid Track (Pista de Grid): Es el espacio entre dos líneas de grid adyacentes. Básicamente, una fila o una columna.
+
+Grid Cell (Celda de Grid): Es el espacio entre dos líneas de fila y dos líneas de columna adyacentes. Es la unidad más pequeña de la cuadrícula.
+
+Grid Area (Área de Grid): Un espacio rectangular que puede abarcar una o más celdas. Se define por cuatro líneas de grid.
+
+Gap (Hueco): El espacio entre las filas y columnas. Antes se usaba grid-gap, pero ahora se prefiere gap, row-gap y column-gap.
+
+2. Propiedades para el Contenedor Grid (El Padre)
+
+Estas propiedades se aplican al elemento que tiene display: grid;.
+
+2.1. Definiendo la Estructura de la Cuadrícula
+
+display
+: Define el elemento como un contenedor de cuadrícula.
+* grid: Crea un contenedor de bloque.
+* inline-grid: Crea un contenedor en línea.
+
+grid-template-columns y grid-template-rows
+: Las propiedades más importantes. Definen el número y el tamaño de las columnas y filas de la cuadrícula, respectivamente.
+
+code
+Code
+download
+content_copy
+expand_less
+
+```css
+.container {
+  /* Tres columnas: la primera de 100px, la segunda automática y la tercera del 25% */
+  grid-template-columns: 100px auto 25%;
+
+  /* Dos filas: ambas de 200px de alto */
+  grid-template-rows: 200px 200px;
+}
+```
+
+**Unidades y Funciones Especiales:**
+
+*   **Unidad `fr` (Fracción):** Representa una fracción del espacio disponible en el contenedor. Es extremadamente útil para diseños fluidos.
+    ```css
+    /* Tres columnas: la segunda es el doble de ancha que las otras dos. */
+    grid-template-columns: 1fr 2fr 1fr; /* Total: 4fr. 1/4, 2/4, 1/4 del espacio */
+    ```
+*   **Función `repeat()`:** Para evitar escribir valores repetitivos.
+    ```css
+    /* En lugar de: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas de 1fr cada una */
+
+    /* También puedes repetir patrones */
+    grid-template-columns: repeat(2, 100px 1fr); /* Resultado: 100px 1fr 100px 1fr */
+    ```
+*   **Función `minmax()`:** Define un rango de tamaño (un mínimo y un máximo). Ideal para diseños responsivos.
+    ```css
+    /* La columna tendrá un mínimo de 200px, pero crecerá hasta ocupar 1fr si hay espacio */
+    grid-template-columns: minmax(200px, 1fr);
+    ```
+*   **Palabras Clave `auto-fill` y `auto-fit`:** Se usan con `repeat()` para crear un número de pistas variable según el espacio disponible.
+    ```css
+    /* Crea tantas columnas como quepan, con un mínimo de 250px y un máximo de 1fr */
+    /* ¡Esta es la fórmula mágica para galerías responsivas! */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    ```
+    *   `auto-fit`: Si las pistas no ocupan todo el espacio, las estira para que lo hagan.
+    *   `auto-fill`: Mantiene el tamaño de las pistas, dejando espacio vacío si es necesario.
+
+grid-template-areas
+: Permite nombrar áreas de la cuadrícula para posicionar ítems de una forma muy visual y semántica.
+
+code
+Code
+download
+content_copy
+expand_less
+IGNORE_WHEN_COPYING_START
+IGNORE_WHEN_COPYING_END
+```css
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header  header"
+    "sidebar main"
+    "footer  footer";
+}
+
+/* Luego, en los ítems, asignas el nombre: */
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+```
+*   Cada string entre comillas representa una fila.
+*   El `.` se usa para dejar una celda vacía.
+2.2. Espaciado (Gaps)
+
+gap (shorthand), row-gap, column-gap
+: Define el tamaño del hueco entre las pistas.
+
+code
+Code
+download
+content_copy
+expand_less
+IGNORE_WHEN_COPYING_START
+IGNORE_WHEN_COPYING_END
+```css
+.container {
+  /* Shorthand: 20px de espacio en filas, 10px en columnas */
+  gap: 20px 10px;
+
+  /* Si solo pones un valor, se aplica a ambos */
+  gap: 15px;
+
+  /* Propiedades individuales */
+  row-gap: 20px;
+  column-gap: 10px;
+}
+```
+2.3. Alineación de la Cuadrícula Completa
+
+Estas propiedades alinean la cuadrícula dentro del contenedor, solo si el tamaño total de la cuadrícula es menor que su contenedor.
+
+justify-content
+: Alinea la cuadrícula en el eje horizontal.
+* start | end | center | stretch | space-around | space-between | space-evenly
+
+align-content
+: Alinea la cuadrícula en el eje vertical.
+* Mismos valores que justify-content.
+
+place-content
+: Shorthand para align-content y justify-content. place-content: <align> <justify>;
+
+2.4. Alineación de los Ítems (por defecto)
+
+Estas propiedades definen la alineación por defecto de todos los ítems dentro de sus celdas.
+
+justify-items
+: Alinea los ítems en el eje horizontal dentro de su celda.
+* start | end | center | stretch (valor por defecto, el ítem ocupa todo el ancho de la celda).
+
+align-items
+: Alinea los ítems en el eje vertical dentro de su celda.
+* start | end | center | stretch (valor por defecto, el ítem ocupa toda la altura de la celda).
+
+place-items
+: Shorthand para align-items y justify-items. place-items: <align> <justify>;
+
+2.5. Pistas Implícitas
+
+Si colocas un ítem fuera de la cuadrícula definida explícitamente, Grid crea pistas "implícitas".
+
+grid-auto-rows y grid-auto-columns
+: Definen el tamaño de estas pistas implícitas.
+
+grid-auto-flow
+: Controla cómo se colocan los ítems que no tienen una posición explícita.
+* row (por defecto): Rellena las filas una por una.
+* column: Rellena las columnas una por una.
+* dense: Intenta rellenar los huecos vacíos en la cuadrícula, lo que puede cambiar el orden visual de los elementos.
+
+3. Propiedades para los Ítems Grid (Los Hijos)
+
+Estas propiedades se aplican a los hijos directos del contenedor.
+
+3.1. Posicionamiento y Expansión (Spanning)
+
+Se basan en las líneas de la cuadrícula. Recuerda que una cuadrícula de 3 columnas tiene 4 líneas de columna.
+
+grid-column-start, grid-column-end, grid-row-start, grid-row-end
+: Definen en qué línea empieza y termina un ítem.
+
+code
+Code
+download
+content_copy
+expand_less
+IGNORE_WHEN_COPYING_START
+IGNORE_WHEN_COPYING_END
+```css
+.item-1 {
+  /* Empieza en la línea de columna 1 y termina ANTES de la línea 3 (ocupa 2 columnas) */
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  /* Empieza en la línea de fila 2 y termina ANTES de la línea 4 (ocupa 2 filas) */
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+```
+
+También puedes usar la palabra clave `span` para indicar cuántas pistas debe ocupar.
+```css
+.item-2 {
+  grid-column-start: 2;
+  /* Ocupa 3 columnas desde la línea 2 */
+  grid-column-end: span 3;
+}
+```
+
+grid-column y grid-row
+: Shorthands para las propiedades de arriba.
+
+code
+Code
+download
+content_copy
+expand_less
+IGNORE_WHEN_COPYING_START
+IGNORE_WHEN_COPYING_END
+```css
+.item-1 {
+  /* <start> / <end> */
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+
+  /* También funciona con span */
+  grid-column: 1 / span 2; /* Empieza en 1 y ocupa 2 columnas */
+}
+```
+
+grid-area
+: Tiene dos usos:
+1. Asignar un ítem a un área nombrada con grid-template-areas.
+css .header { grid-area: header; }
+2. Shorthand para grid-row-start / grid-column-start / grid-row-end / grid-column-end.
+css .item-1 { grid-area: 2 / 1 / 4 / 3; /* fila-inicio / col-inicio / fila-fin / col-fin */ }
+
+3.2. Alineación Individual de Ítems
+
+Estas propiedades sobrescriben los valores de justify-items y align-items del contenedor para un ítem específico.
+
+justify-self
+: Alinea un ítem individual en el eje horizontal dentro de su celda.
+* start | end | center | stretch
+
+align-self
+: Alinea un ítem individual en el eje vertical dentro de su celda.
+* start | end | center | stretch
+
+place-self
+: Shorthand para align-self y justify-self. place-self: <align> <justify>;
+
+4. Ejemplo Práctico: Layout de una Página Web
+code
+Html
+download
+content_copy
+expand_less
+IGNORE_WHEN_COPYING_START
+IGNORE_WHEN_COPYING_END
+<div class="page-container">
+  <header class="header">Header</header>
+  <nav class="nav">Navigation</nav>
+  <main class="main">Main Content Area</main>
+  <aside class="sidebar">Sidebar</aside>
+  <footer class="footer">Footer</footer>
+</div>
+code
+CSS
+download
+content_copy
+expand_less
+IGNORE_WHEN_COPYING_START
+IGNORE_WHEN_COPYING_END
+/* Estilos básicos para visualización */
+.page-container > * {
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+.page-container {
+  display: grid;
+  height: 100vh;
+  gap: 15px; /* Espacio entre todos los elementos */
+  
+  /* Definimos las columnas y filas */
+  grid-template-columns: 200px 1fr; /* Una sidebar fija y un contenido principal fluido */
+  grid-template-rows: auto 1fr auto; /* Header y footer con altura automática, contenido principal flexible */
+  
+  /* Definimos las áreas de forma visual */
+  grid-template-areas:
+    "header  header"
+    "nav     main"
+    "sidebar main"
+    "footer  footer";
+}
+
+/* Asignamos cada elemento a su área */
+.header {
+  grid-area: header;
+}
+.nav {
+  grid-area: nav;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+}
+
+/* Para hacerlo responsivo en pantallas pequeñas */
+@media (max-width: 768px) {
+  .page-container {
+    /* Cambiamos la estructura a una sola columna */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto auto; /* Ajustamos filas */
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "sidebar"
+      "footer";
+  }
+}
+5. Consejos Finales y Buenas Prácticas
+
+Grid para el Layout, Flexbox para los Componentes: Usa Grid para la maquetación general de la página (2D) y Flexbox para alinear elementos dentro de un componente (1D). ¡Puedes anidar Flexbox dentro de Grid y viceversa!
+
+Usa las Herramientas del Navegador: Firefox y Chrome tienen inspectores de Grid fantásticos. Actívalos en las herramientas de desarrollador para visualizar las líneas, pistas y áreas. Es la mejor forma de depurar.
+
+Piensa en fr y minmax() para la Responsividad: Estas herramientas son increíblemente potentes para crear diseños que se adaptan sin necesidad de muchos media queries.
+
+grid-template-areas es tu amigo: Para layouts complejos, es mucho más legible y fácil de mantener que usar números de línea.
+
+Espero que estas notas te sean de gran ayuda. ¡Guárdalas y consúltalas siempre que lo necesites

@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial';
+}
+
+.grid {
+    max-width: 700px;
+    width: 90%;
+    height: 500px;
+    margin: 20px auto;
+    outline: 3px solid #000;
+    display: grid;
+    /* grid-template-columns: 200px 200px; */
+    grid-template-columns: repeat(3, 1fr);
+    /* Lleva dos parametros que son el Cantidad (4) y el tamaño (1fr) y tambien podes
+    crear patrones de columnas ejemplo (4, 20px 50px) */
+    grid-template-rows: repeat(4, 1fr);
+    /* Lleva dos parametros que son el Cantidad (4) y el tamaño (1fr) y tambien podes
+    crear patrones de filas ejemplo (4, 20px 50px), Tiene el mismo comportamiento que columns */
+
+    /* grid-auto-flow: column; */
+    /* Tiene por defecto el comportamiento de estirarse */
+    /* align-items: stretch; */
+
+    /* row-gap: 20px;
+    column-gap: 20px; */
+    /* gap: row column; */
+    gap: 10px;
+
+    /* grid-auto-flow: column; */
+    /* Para los valores implicitos adapta el tamaño de las columnas y filas mediante lo que 
+    le pasamos en los dos parametros */
+    /* grid-auto-columns: 200px;
+    grid-auto-rows: 200px; */
+
+    /* Para llenar los espacios vacio y corregir el contenido */
+    /* grid-auto-flow: column dense; */
+
+}
+
+.grid__item {
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 1rem;
+   /* Al menos de que tengan un height definido */
+    /* height: 100px; */
+}
+
+.grid :nth-child(1) {
+    background-color: #f00;
+    /* grid-row: 3; */
+    /* grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5; */
+
+    /* grid-column: 3 / 5;
+    grid-row: 3 / 5; */
+    /* El / indica el inicio y fin de la columna o fila es mas practico usar este */
+}
+.grid :nth-child(2) {
+    background-color: rgb(39, 85, 39);
+    /* grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+    /* grid-row: span 2; */
+}
+.grid :nth-child(3) {
+    background-color: #00f;
+    /* grid-column: span 2; */
+    /* El span indica que ocupe el apacio que le pasemos desde la columna inicial en este caso
+    es (2) */
+    /* grid-row: span 3; */
+    /* El span indica que ocupe el apacio que le pasemos desde la fila inicial en este caso
+    es (3) */
+
+    /* grid-column: 2 / span 3;
+    grid-row: 1 / span 3; */
+    /* grid-column: 1 / -2;
+    grid-row: 3 / -1; */
+    /* grid-area: 2 / 1 / 5 / 4; */
+    /* grid-area: fila inicio / columna inicio / fila fin / columna fin; */
+}
+
+.grid :nth-child(4) {
+    background-color: rgb(3, 3, 2);
+    /* grid-column: span 2; */
+}
+
+.grid :nth-child(5) {
+    background-color: rgb(36, 35, 124);
+}
+
+.grid :nth-child(6) {
+    background-color: rgb(240, 0, 240);
+}

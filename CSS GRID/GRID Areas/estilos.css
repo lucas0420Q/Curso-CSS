@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial';
+}
+
+.grid{
+    height: 100vh;
+    /* outline: 3px solid black;
+    margin: 10px auto; */
+    display: grid;
+    /* grid-template-areas: 
+    "Juan Pedro Jesus Maria" 
+    "Juan Pedro Jesus Maria"; */
+    /* grid-auto-columns: 50px; */
+    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+     grid-template-areas:
+    "header header header header header"
+    "main main main main sidebar"
+    "main main main main sidebar"
+    "main main main main sidebar"
+    "footer footer footer footer footer";
+
+}
+
+.grid__item{
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    background: crimson;
+    grid-area: header;
+}
+
+.main{
+    background: steelblue;
+    grid-area: main;
+}
+
+.sidebar{
+    background: orange;
+    grid-area: sidebar;
+}
+
+.footer{
+    background: green;
+    grid-area: footer;
+}
+
+@media screen and (max-width: 800px){
+    .grid{
+        grid-template-areas:
+        "header header header header header"
+        "main main main sidebar sidebar"
+        "main main main sidebar sidebar"
+        "main main main sidebar sidebar"
+        "footer footer footer footer footer";
+    }
+    @media screen and (max-width: 500px){
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+        }
+    }
+}

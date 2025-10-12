@@ -118,3 +118,9 @@ flex-grow → Hace que el elemento crezca si sobra espacio.
 flex-shrink → Permite que el elemento se encoja si falta espacio.
 
 flex-basis → Define el tamaño inicial del elemento.
+
+gap: Define el espacio entre los elementos de un contenedor flex, grid o CSS multicolumn. Es más limpio que usar margin entre los elementos.
+
+( gap = Espacio limpio entre elementos.
+Más eficiente que margin.
+Funciona con flex, grid y más. )
