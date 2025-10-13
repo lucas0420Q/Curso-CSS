@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid{
+    width: 90%;
+    max-width: 600px;
+    height: 600px;
+    margin: 30px auto;
+    outline: 5px solid #000;
+    display: grid;
+    /* grid-template-columns: 
+    [cabecera-start main-start] 1fr 1fr 1fr 1fr [cabecera-end main-end];  */
+    /* Para nombrar las líneas de la cuadrícula, se nombre entre corchetes []*/
+    /* No es necesario nombre todas las lineas */
+    /* grid-template-rows: 
+    [cabecera-start] 1fr [cabecera-end main-start] 1fr [main-end] 1fr; */
+    /* Para nombrar las líneas de la cuadrícula, se nombre entre corchetes [] */
+
+    /* grid-template-columns: repeat(4, [column-start] 1fr [column-end]); */
+    /* grid-template-rows: repeat(3, [row-star] 1fr [row-end]); */
+    /* grid-template-areas: 
+    "header header header header"
+    "main main main sidebar"
+    "footer footer footer footer"; */
+
+    /* grid-template-columns: min-content max-content; */
+    /* grid-template-rows: min-content max-content; */
+
+    /* grid-template-columns: fit-content(200px); */
+    /* Actua como el min-content pero depende del contenido y el ancho máximo especificado que en este ejemplo es 200px */
+
+    /* grid-template-columns: minmax(80px, 300px) minmax(20px, 80px); */
+    /* la funcion minmax() permite establecer un tamaño mínimo y máximo para las columnas */
+
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    /* La funcion de auto-fill permite llenar el espacio disponible con tantas columnas como sea posible */
+
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    /* La funcion de auto-fit permite ajustar el tamaño de las columnas al espacio disponible */
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    /* justify-items: stretch | start | end | center; Alinea los elementos hijos horizontalmente (Columnas) - column */
+    /* align-items: stretch | start | end | center; Alinea los elementos hijos verticalmente (Filas) - row */
+
+    /* place-items: align-items / justify-items; */
+    /* place-items: start stretch; */
+    /* la funcion place-items permite alinear los elementos hijos en ambas direcciones (horizontal y vertical) */
+
+    /* justify-content: stretch | start | end | center | space-between | space-around | space-evenly; */
+    /* align-content: stretch | start | end | center | space-between | space-around | space-evenly; */
+    /* place-content: align-content / justify-content; */
+    /* place-content: center space-between; */
+
+    /* grid: rows / columns; */
+    /* grid: 50% 25% 25% / repeat(3, 1fr); */
+
+}
+
+
+.grid__item{
+    padding: 20px 0;
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+    order: 0;
+}
+
+.grid__item:nth-child(1){
+    background-color: #f25c54;
+    /* grid-column: centro / end; Ocupa desde la línea centro hasta la línea end */
+    /* grid-row: medio / Final; Ocupa desde la línea medio hasta la línea Final  */
+    /* grid-area: main;  Ocupa el área nombrada main  */
+    /* grid-column: column-start 2 / column-start 4; */
+    /* grid-row: row-start 3 / row-end 1; */
+    /* grid-column: header-start / header-end; */
+    /* grid-row: header-start / header-end; */
+    /* order: 1; */
+    /* grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: 2; */
+    /* align-self: stretch;
+    justify-self: stretch; */
+    /* place-self: center; */
+
+}
+
+.grid__item:nth-child(2){
+    background-color: #f9a03f;
+    /* grid-area: cabecera;  Ocupa el área nombrada cabecera */
+    /* grid-column: main-start / main-end; */
+    /* grid-row: main-start / main-end; */
+    /* order: 2; */
+    /* grid-column: 1 / 2;
+    grid-row: 1 / 2; */
+}
+
+.grid__item:nth-child(3){
+    background-color: #f2d338;
+    /* grid-column: sidebar-start / sidebar-end; */
+    /* grid-row: sidebar-start / sidebar-end; */
+}
+
+.grid__item:nth-child(4){
+    background-color: #88c425;
+    /* grid-column: footer-start / footer-end; */
+    /* grid-row: footer-start / footer-end; */
+    /* order: -1; */
+}
