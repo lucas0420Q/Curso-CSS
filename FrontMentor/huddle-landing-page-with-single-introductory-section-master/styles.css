@@ -1,0 +1,311 @@
+/* ========================================
+   RESET Y CONFIGURACIÓN BÁSICA
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colores */
+  --primary-purple: hsl(257, 40%, 49%);
+  --accent-magenta: hsl(300, 69%, 71%);
+  --white: hsl(0, 0%, 100%);
+  
+  /* Fuentes */
+  --font-headings: 'Poppins', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--primary-purple);
+  background-image: url('./images/bg-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 2rem 1.5rem;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+.header {
+  margin-bottom: 4rem;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+   ======================================== */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.illustration {
+  width: 100%;
+  text-align: center;
+}
+
+.illustration img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* ========================================
+   CONTENIDO DE TEXTO
+   ======================================== */
+.content {
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-headings);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  opacity: 0.9;
+}
+
+/* ========================================
+   BOTÓN
+   ======================================== */
+.btn-register {
+  background-color: var(--white);
+  color: var(--primary-purple);
+  font-family: var(--font-headings);
+  font-weight: 400;
+  font-size: 0.875rem;
+  padding: 0.75rem 4rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-register:hover {
+  background-color: var(--accent-magenta);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-register:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   FOOTER Y REDES SOCIALES
+   ======================================== */
+.footer {
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+
+.social-icon:hover {
+  border-color: var(--accent-magenta);
+  color: var(--accent-magenta);
+  transform: translateY(-3px);
+}
+
+.attribution {
+  font-size: 0.75rem;
+  color: var(--white);
+  opacity: 0.8;
+}
+
+.attribution a {
+  color: var(--accent-magenta);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.attribution a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - TABLET Y DESKTOP
+   ======================================== */
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url('./images/bg-desktop.svg');
+    background-size: cover;
+  }
+
+  .container {
+    padding: 3rem 2rem;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .main-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .illustration {
+    flex: 1.2;
+    text-align: left;
+  }
+
+  .illustration img {
+    max-width: 100%;
+  }
+
+  .content {
+    flex: 1;
+    text-align: left;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .description {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn-register {
+    font-size: 1rem;
+    padding: 1rem 4.5rem;
+  }
+
+  .footer {
+    text-align: right;
+  }
+
+  .social-links {
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 4rem 5rem;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .header {
+    margin-bottom: 5rem;
+  }
+
+  .main-content {
+    gap: 5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .description {
+    font-size: 1.125rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container > * {
+  animation: fadeIn 0.6s ease-out backwards;
+}
+
+.header {
+  animation-delay: 0.1s;
+}
+
+.illustration {
+  animation-delay: 0.2s;
+}
+
+.content {
+  animation-delay: 0.3s;
+}
+
+.footer {
+  animation-delay: 0.4s;
+}
