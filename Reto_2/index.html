@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;500;600;700&family=Bricolage+Grotesque:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <title>Reto 2 - Aplicación del Clima</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1> Aplicación del Clima</h1>
+      <p>Consulta el clima de cualquier ciudad en tiempo real</p>
+    </div>
+
+    <div class="weather-app">
+      <div class="weather-search">
+        <input type="text" placeholder="Buscar ciudad, ej: Buenos Aires" value="Asuncion">
+        <button>Buscar</button>
+      </div>
+      
+      <div class="weather-current">
+        <h3 class="weather-location"> Asuncion, Paraguay</h3>
+        <div class="weather-temp">22°C</div>
+        <p class="weather-description"> Soleado</p>
+        
+        <div class="weather-metrics">
+          <div class="metric">
+            <div class="metric-label">Sensación térmica</div>
+            <div class="metric-value">24°C</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Humedad</div>
+            <div class="metric-value">65%</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Viento</div>
+            <div class="metric-value">12 km/h</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Precipitación</div>
+            <div class="metric-value">0 mm</div>
+          </div>
+        </div>
+      </div>
+      
+      <h4 class="forecast-title"> Pronóstico Semanal</h4>
+      <div class="weather-forecast">
+        <div class="forecast-day">
+          <div class="forecast-date">Lunes</div>
+          <div class="forecast-icon">☀️</div>
+          <div class="forecast-temp">25° / 18°</div>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-date">Martes</div>
+          <div class="forecast-icon">🌤️</div>
+          <div class="forecast-temp">23° / 17°</div>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-date">Miércoles</div>
+          <div class="forecast-icon">⛅</div>
+          <div class="forecast-temp">21° / 16°</div>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-date">Jueves</div>
+          <div class="forecast-icon">🌧️</div>
+          <div class="forecast-temp">19° / 14°</div>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-date">Viernes</div>
+          <div class="forecast-icon">⛈️</div>
+          <div class="forecast-temp">18° / 13°</div>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-date">Sábado</div>
+          <div class="forecast-icon">🌤️</div>
+          <div class="forecast-temp">22° / 15°</div>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-date">Domingo</div>
+          <div class="forecast-icon">☀️</div>
+          <div class="forecast-temp">24° / 17°</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> | 
+      Coded by <a href="#">Lucas Zaracho</a> 
+    </div>
+  </div>
+</body>
+</html>
