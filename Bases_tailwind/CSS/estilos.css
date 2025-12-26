@@ -1,0 +1,51 @@
+.font-arial{
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+.font-large{
+    font-size: 3rem;
+}
+
+.font-medium{
+    font-size: 1.5rem;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-normal {
+    font-weight: normal;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-50 {
+    margin-top: 50px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.red-text {
+    background-color: crimson;
+}
+
+.blue-text {
+    background-color: deepskyblue;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
